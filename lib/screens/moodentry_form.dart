@@ -33,7 +33,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
-      drawer: LeftDrawer(),
+      drawer: const LeftDrawer(),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
@@ -118,20 +118,19 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     style: ButtonStyle(
+                      // ignore: deprecated_member_use
                       backgroundColor: MaterialStateProperty.all(
                           Theme.of(context).colorScheme.primary),
                     ),
                     onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                             // Kirim ke Django dan tunggu respons
-                            // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                             final response = await request.postJson(
                                 "http://127.0.0.1:8000/create-flutter/",
                                 jsonEncode(<String, String>{
                                     'mood': _mood,
                                     'mood_intensity': _moodIntensity.toString(),
                                     'feelings': _feelings,
-                                // TODO: Sesuaikan field data sesuai dengan aplikasimu
                                 }),
                             );
                             if (context.mounted) {

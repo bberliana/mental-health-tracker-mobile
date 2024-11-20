@@ -15,3 +15,5 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # mental-health-tracker-mobile
+
+[![Build status](https://build.appcenter.ms/v0.1/apps/f073d16d-6bd1-4762-95aa-f5228b46d54a/branches/main/badge)](https://appcenter.ms)

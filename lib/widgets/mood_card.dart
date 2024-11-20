@@ -41,7 +41,7 @@ class ItemCard extends StatelessWidget {
           if (item.name == "Tambah Mood") {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => MoodEntryFormPage()),
+              MaterialPageRoute(builder: (context) => const MoodEntryFormPage()),
             );
           }
           else if (item.name == "Lihat Mood") {
